@@ -222,7 +222,7 @@
     "#........#.........#",
     "#..B....B#B....B...#",
     "#........#.........#",
-    "####################",
+   "#########..#########",
   ];
 
   function buildMap() {
@@ -246,7 +246,8 @@
 
   function spawnPlayer() {
     player = {
-      x: 9 * TILE + TILE / 2, y: (ROWS - 1) * TILE + TILE / 2,
+      x: 12 * TILE + TILE / 2,
+y: (ROWS - 2) * TILE + TILE / 2,
       w: 30, h: 30,
       dir: "up",
       speed: PLAYER_SPEED,
@@ -483,8 +484,8 @@
       gameOver(false);
     } else {
       // respawn with brief invulnerability
-      player.x = 9 * TILE + TILE / 2;
-      player.y = (ROWS - 1) * TILE + TILE / 2;
+     player.x = 12 * TILE + TILE / 2;
+player.y = (ROWS - 2) * TILE + TILE / 2;
       player.dir = "up";
       player.invuln = 120;
       player.cooldown = 0;
