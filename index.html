@@ -257,11 +257,11 @@ y: (ROWS - 2) * TILE + TILE / 2,
   }
 
   function spawnEnemy() {
-    const spots = [
-      { x: TILE / 2, y: TILE / 2 },
-      { x: (COLS - 1) * TILE + TILE / 2, y: TILE / 2 },
-      { x: TILE / 2, y: TILE * 2 + TILE / 2 },
-    ];
+   const spots = [
+  { x: TILE + TILE / 2, y: TILE + TILE / 2 }, // 左上空地
+  { x: (COLS - 2) * TILE + TILE / 2, y: TILE + TILE / 2 }, // 右上空地
+  { x: TILE + TILE / 2, y: 3 * TILE + TILE / 2 }, // 左侧空地
+];
     const s = spots[Math.floor(Math.random() * spots.length)];
     enemies.push({
       x: s.x, y: s.y,
